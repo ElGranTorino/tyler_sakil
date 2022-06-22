@@ -1,0 +1,137 @@
+include ../components/head.pug
+link(rel='stylesheet' href='css/styles.css')
+link(rel='stylesheet' href='css/grid.css')
+#app.app
+  .cursor
+  .bg
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+    .bg__line
+  nav.nav
+    .nav__about
+      a.nav__about-link.uppercase(href='#')
+        span.nav__about-text About me
+    .nav__brand.brand
+      a.brand__link.uppercase(href='#') 
+        span.brand__text ts
+    .nav__contact
+      button.nav__contact-btn.uppercase 
+        span.nav__contact-text Contacts
+  #scroll-container.container
+    section.hero
+      .hero__content
+        .hero__name
+          h1.hero__name-text.uppercase
+            span.hero__name-char T
+            span.hero__name-char y
+            span.hero__name-char l
+            span.hero__name-char e
+            span.hero__name-char r
+            span.hero__name-char &nbsp;
+            span.hero__name-char S
+            span.hero__name-char a
+            span.hero__name-char k
+            span.hero__name-char i
+            span.hero__name-char l
+        .hero__profession
+          h2.hero__profession-text.uppercase Photographer
+        .hero__navigation
+          .hero__navigation-portfolio
+            a.hero__navigation-link.uppercase(href='#') Portfolio
+          .hero__arrow
+            span.arrow
+              span.point
+          .hero__contact
+            button.hero__contact-btn.uppercase Contact me
+    section.about
+      .about__content
+        .about__avatar-inner
+          img.about__avatar(src='/img/avatar.jpg' alt='Avatar image')
+        .about__body-inner
+          .about__title
+            span.about__title-text.uppercase.section-title About
+          p.about__paragraph
+            | Dicta et nostrum cupiditate perspiciatis laboriosam odio, aut rem voluptatibus, doloremque veniam, dolor blanditiis vero doloribus? Cupiditate, ad reiciendis odit deserunt repudiandae voluptates quibusdam quisquam, voluptas expedita consectetur earum minima laboriosam in, impedit praesentium suscipit sed dicta.
+          p.about__paragraph
+            | Error velit quod eius libero est corporis maiores provident fugiat soluta, explicabo temporibus, asperiores, vel ducimus sequi?
+    section.portfolio
+      .portfolio__content
+        .portfolio__title
+          span.portfolio__title-text.section-title.uppercase Portfolio
+        .grid-wrapper.portfolio__grid
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_4.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_5.jpg' alt='')
+          .tall.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_1.jpg' alt='')
+          .wide.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_8.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_7.jpg' alt='')
+          .tall.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_2.jpg' alt='')
+          .big.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_6.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_9.jpg' alt='')
+          .wide.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_10.jpg' alt='')
+          .big.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_11.jpg' alt='')
+          .tall.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_3.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_12.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_13.jpg' alt='')
+          div.portfolio__grid-item
+            img(src='/img/portfolio/portfolio_14.jpg' alt='')
+    footer.footer
+      .footer__content
+        .footer__title.section-title.uppercase Contacts
+        .footer__body
+          .footer__contacts
+            .footer__phone
+              span
+                ion-icon(name='call')
+              span.phone 07970 845 367
+            .footer__email
+              span
+                ion-icon(name='mail')
+              span.uppercase.email tyler_sakil@gmail.com
+          .footer__socials
+            .footer__subtitle.uppercase social media
+            .footer__socials-wrap
+              ul.footer__socials-list
+                li.footer__socials-item.socials-item
+                  a.socials-link.socials-link(href='#')
+                    ion-icon(name='logo-instagram')
+                li.footer__socials-item.socials-item
+                  a.socials-link.socials-link(href='')
+                    ion-icon(name='logo-twitter')
+                li.footer__socials-item.socials-item
+                  a.socials-link.socials-link(href='')
+                    ion-icon(name='logo-linkedin')
+          .footer__form
+            form.form.footer-form(action='')
+              .form-item
+                input.email.input-email(type='email' placeholder='Your email')
+                button.send-email-button.btn(type='submit uppercase') Send
+        .footer__copyright
+          span.copyright
+            | Designed by 
+            a(href='https://www.behance.net/jennetshayymova1' target="_blank") Jennet Shay
+            |  and developed by 
+            a(href='https://t.me/the_solomon' target="_blank") Andrew Solomon
+script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+script(type="module" src="/js/index.js")
