@@ -39,7 +39,7 @@ export default class Cursor {
 
             setTimeout(() => {
                 this.$el.classList.remove('click')
-            }, 500)
+            }, 300)
         }
     }
 
