@@ -39,7 +39,6 @@ const onScroll = (e) => {
           min = 0,
           max = document.body.getBoundingClientRect().bottom - window.innerHeight;
     cont.style.transition = 'all 1.3s ease-out'
-    console.log(min, max, offset.y)
     if(e.deltaY < 0){
         if(offset.y < 0){
             offset.y += 120
@@ -57,7 +56,6 @@ const onKeyDown = (e) => {
           min = 0,
           max = document.body.getBoundingClientRect().bottom - window.innerHeight;
     cont.style.transition = 'all 1.3s ease-out'
-    console.log(min, max, offset.y)
     if(e.deltaY < 0){
         if(offset.y < 0){
             offset.y += 25

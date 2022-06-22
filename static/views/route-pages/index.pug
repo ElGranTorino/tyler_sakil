@@ -16,8 +16,8 @@ link(rel='stylesheet' href='css/grid.css')
     .bg__line
   nav.nav
     .nav__about
-      a.nav__about-link.uppercase(href='#')
-        span.nav__about-text About me
+      a.nav__about-link.uppercase(href='#' )
+        span.nav__about-text.js-cursor(data-cursor-type="big") About me
     .nav__brand.brand
       a.brand__link.uppercase(href='#') 
         span.brand__text ts
@@ -49,7 +49,7 @@ link(rel='stylesheet' href='css/grid.css')
             span.arrow
               span.point
           .hero__contact
-            button.hero__contact-btn.uppercase Contact me
+            button.hero__contact-btn.uppercase.js-cursor(data-cursor-type="link") Contact me
     section.about
       .about__content
         .about__avatar-inner
@@ -124,13 +124,13 @@ link(rel='stylesheet' href='css/grid.css')
             form.form.footer-form(action='')
               .form-item
                 input.email.input-email(type='email' placeholder='Your email')
-                button.send-email-button.btn(type='submit uppercase') Send
+                button.send-email-button.btn.js-cursor(type='submit uppercase' data-cursor-type="link") Send
         .footer__copyright
           span.copyright
             | Designed by 
-            a(href='https://www.behance.net/jennetshayymova1' target="_blank") Jennet Shay
+            a.js-cursor(href='https://www.behance.net/jennetshayymova1' target="_blank" data-cursor-type="link") Jennet Shay
             |  and developed by 
-            a(href='https://t.me/the_solomon' target="_blank") Andrew Solomon
+            a.js-cursor(href='https://t.me/the_solomon' target="_blank" data-cursor-type="link") Andrew Solomon
 script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
 script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
 script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")

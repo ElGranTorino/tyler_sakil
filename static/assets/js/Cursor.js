@@ -12,6 +12,19 @@ export default class Cursor {
 
         document.addEventListener('mousemove', (e) => this.move(e));
         document.addEventListener('click', () => this.interact('click'))
+
+        const initCursorHandlers = () => {
+            document.addEventListener('mouseover', (e) => {
+                if(!e.target.classList.contains('js-cursor')) return;
+                const cursorType = e.target.getAttribute('data-cursor-type');
+                this.interact(cursorType);
+            })
+            document.addEventListener('mouseout', () => {
+                this.interact();
+            })
+        };
+
+        initCursorHandlers();
     }
     move(e){
         [this.pos.x, this.pos.y] = [e.clientX, e.clientY];
@@ -20,18 +33,19 @@ export default class Cursor {
         this.$el.style.top = this.pos.y + 'px'
         this.$el.style.transition = 'all .05s linear'
     }
-
+    resetStyles() {
+        this.$el.style = '';
+        this.$el.style.left = this.pos.x + 'px';
+        this.$el.style.top = this.pos.y + 'px';
+    }
     interact(type){
         if(!type) {
-            this.$el.style = '';
-            this.$el.style.left = this.pos.x + 'px';
-            this.$el.style.top = this.pos.y + 'px';
+            this.resetStyles()
             return
         }
         if(type === 'link'){
             this.$el.style.transition = 'all .2s linear'
             this.$el.style.opacity = '0'
-            
             return
         }
         if(type === 'click'){
@@ -40,6 +54,12 @@ export default class Cursor {
             setTimeout(() => {
                 this.$el.classList.remove('click')
             }, 300)
+        }
+        if(type === 'big'){
+            this.$el.style.transition = 'all .4s linear'
+            this.$el.style.width = '60px'
+            this.$el.style.height = '60px'
+            this.$el.style.opacity = '0.6'
         }
     }
 
