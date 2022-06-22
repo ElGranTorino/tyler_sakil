@@ -64,10 +64,10 @@ export default class Cursor {
         }
         if(type === 'blend'){
             this.$el.style.transition = 'all .4s linear'
-            this.$el.style.mixBlendMode = 'multiply'
+            this.$el.style.mixBlendMode = 'difference'
             this.$el.style.width = '150px'
             this.$el.style.height = '150px'
-            this.$el.style.background = 'crimson'
+            this.$el.style.background = 'coral'
             this.$el.textContent = 'explore'
             this.$el.style.lineHeight = '150px'
         }
