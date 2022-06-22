@@ -68,6 +68,16 @@ const onKeyDown = (e) => {
         }
     }
 }
+
+const animateAvatar = () => {
+    gsap.to('.overlay-column.o1', {duration: 0.5, height: 0, delay: 3})
+    gsap.to('.overlay-column.o2', {duration: 0.5, height: 0, delay: 3.3})
+    gsap.to('.overlay-column.o3', {duration: 0.5, height: 0, delay: 3.6})
+    gsap.to('.overlay-column.o4', {duration: 0.5, height: 0, delay: 3.9})
+    gsap.to('.overlay-column.o5', {duration: 0.5, height: 0, delay: 4.2})
+}
+
+animateAvatar()
 window.addEventListener('wheel',(e) => onScroll(e))
 window.addEventListener('keydown', (e) => onKeyDown(e))
 

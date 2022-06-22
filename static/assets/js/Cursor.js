@@ -37,6 +37,7 @@ export default class Cursor {
         this.$el.style = '';
         this.$el.style.left = this.pos.x + 'px';
         this.$el.style.top = this.pos.y + 'px';
+        this.$el.textContent = ''
     }
     interact(type){
         if(!type) {
@@ -60,6 +61,15 @@ export default class Cursor {
             this.$el.style.width = '60px'
             this.$el.style.height = '60px'
             this.$el.style.opacity = '0.6'
+        }
+        if(type === 'blend'){
+            this.$el.style.transition = 'all .4s linear'
+            this.$el.style.mixBlendMode = 'multiply'
+            this.$el.style.width = '150px'
+            this.$el.style.height = '150px'
+            this.$el.style.background = 'crimson'
+            this.$el.textContent = 'explore'
+            this.$el.style.lineHeight = '150px'
         }
     }
 

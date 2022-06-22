@@ -30,8 +30,14 @@ body
     z-index: 99999
     transition: all .4s linear
     transform-origin: center center
+    text-align: center
+    color: $colorWhite
+    font-family: 'Montserrat'
+    letter-spacing: 0.04em
+    font-size: 0.9em
     &::after
-        display: block
+        // display: block
+        display: none
         content: ''
         position: absolute
         left: 50%
@@ -105,7 +111,7 @@ body
     display: flex
     justify-content: space-between
     align-items: center
-    z-index: 2
+    z-index: 999
     &__about-link
         font-family: 'Montserrat'
         font-size: 0.9em
@@ -259,8 +265,23 @@ body
         align-items: center
     &__avatar-inner
         max-width: 50%
+        position: relative
         img
             max-width: 100%
+    &__overlay
+        height: 100%
+        width: 100%
+        position: absolute
+        left: 0
+        bottom: 0
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        pointer-events: none
+        .overlay-column
+            width: 20%
+            height: 100%
+            background: $colorWhite
     &__body-inner
         max-width: 45%
     &__title

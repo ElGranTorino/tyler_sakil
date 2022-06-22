@@ -28,9 +28,14 @@ body {
   pointer-events: none;
   z-index: 99999;
   transition: all 0.4s linear;
-  transform-origin: center center; }
+  transform-origin: center center;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat";
+  letter-spacing: 0.04em;
+  font-size: 0.9em; }
   .cursor::after {
-    display: block;
+    display: none;
     content: "";
     position: absolute;
     left: 50%;
@@ -106,7 +111,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2; }
+  z-index: 999; }
   .nav__about-link {
     font-family: "Montserrat";
     font-size: 0.9em;
@@ -259,9 +264,24 @@ body {
     justify-content: space-between;
     align-items: center; }
   .about__avatar-inner {
-    max-width: 50%; }
+    max-width: 50%;
+    position: relative; }
     .about__avatar-inner img {
       max-width: 100%; }
+  .about__overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none; }
+    .about__overlay .overlay-column {
+      width: 20%;
+      height: 100%;
+      background: #fff; }
   .about__body-inner {
     max-width: 45%; }
   .about__title {
