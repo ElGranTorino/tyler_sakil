@@ -26,7 +26,34 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 99999; }
+  z-index: 99999;
+  transition: all 0.05s linear;
+  transform-origin: center center; }
+  .cursor::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    background: transparent;
+    border-radius: 50%;
+    border: solid 2px rgba(30, 30, 30, 0.5);
+    transform-origin: center center;
+    -ms-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center; }
+  .cursor.click::after {
+    transform: translate(-50%, -50%) scale(3);
+    transform-origin: center center;
+    -ms-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    opacity: 0;
+    transition: all 0.3s linear; }
 
 .bg {
   width: 100%;

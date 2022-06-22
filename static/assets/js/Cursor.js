@@ -11,7 +11,7 @@ export default class Cursor {
         };
 
         document.addEventListener('mousemove', (e) => this.move(e));
-        
+        document.addEventListener('click', () => this.interact('click'))
     }
     move(e){
         [this.pos.x, this.pos.y] = [e.clientX, e.clientY];
@@ -31,6 +31,17 @@ export default class Cursor {
         if(type === 'link'){
             this.$el.style.transition = 'all .2s linear'
             this.$el.style.opacity = '0'
+            
+            return
+        }
+        if(type === 'click'){
+            this.$el.classList.add('click')
+
+            setTimeout(() => {
+                this.$el.classList.remove('click')
+            }, 500)
         }
     }
+
+    
 }
