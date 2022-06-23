@@ -367,7 +367,8 @@ body {
   .footer ion-icon {
     font-size: 1.2em;
     transform: translateY(16%);
-    color: rgba(30, 30, 30, 0.9); }
+    color: rgba(30, 30, 30, 0.9);
+    pointer-events: none; }
   .footer__socials-list {
     margin: 0;
     padding: 0;

@@ -22,7 +22,7 @@ link(rel='stylesheet' href='css/grid.css')
       a.brand__link.uppercase(href='#') 
         span.brand__text ts
     .nav__contact
-      button.nav__contact-btn.uppercase 
+      button.nav__contact-btn.uppercase.js-cursor(data-cursor-type="big")
         span.nav__contact-text Contacts
   #scroll-container.container
     section.hero
@@ -44,7 +44,7 @@ link(rel='stylesheet' href='css/grid.css')
           h2.hero__profession-text.uppercase Photographer
         .hero__navigation
           .hero__navigation-portfolio
-            a.hero__navigation-link.uppercase(href='#') Portfolio
+            a.hero__navigation-link.uppercase.js-cursor(href='#' data-cursor-type="big") Portfolio
           .hero__arrow
             span.arrow
               span.point
@@ -118,13 +118,13 @@ link(rel='stylesheet' href='css/grid.css')
             .footer__socials-wrap
               ul.footer__socials-list
                 li.footer__socials-item.socials-item
-                  a.socials-link.socials-link(href='#')
+                  a.socials-link.socials-link.js-cursor(href='https://www.instagram.com' data-cursor-type="big" target="_blank")
                     ion-icon(name='logo-instagram')
                 li.footer__socials-item.socials-item
-                  a.socials-link.socials-link(href='')
+                  a.socials-link.socials-link.js-cursor(href='https://www.twitter.com' data-cursor-type="big" target="_blank")
                     ion-icon(name='logo-twitter')
                 li.footer__socials-item.socials-item
-                  a.socials-link.socials-link(href='')
+                  a.socials-link.socials-link.js-cursor(href='https://www.linkedin.com' data-cursor-type="big" target="_blank")
                     ion-icon(name='logo-linkedin')
           .footer__form
             form.form.footer-form(action='')

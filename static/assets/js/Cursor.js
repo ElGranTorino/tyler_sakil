@@ -55,12 +55,16 @@ export default class Cursor {
             setTimeout(() => {
                 this.$el.classList.remove('click')
             }, 300)
+
+            return
         }
         if(type === 'big'){
             this.$el.style.transition = 'all .4s linear'
             this.$el.style.width = '60px'
             this.$el.style.height = '60px'
             this.$el.style.opacity = '0.6'
+
+            return
         }
         if(type === 'blend'){
             this.$el.style.transition = 'all .4s linear'
@@ -70,6 +74,8 @@ export default class Cursor {
             this.$el.style.background = 'coral'
             this.$el.textContent = 'explore'
             this.$el.style.lineHeight = '150px'
+
+            return
         }
     }
 
