@@ -83,14 +83,19 @@ class Cursor {
 }
 
 const run = () => {
+    //const cursor = new Cursor({
+     //   $el: '.cursor',
+       // w:15,
+        //h:15,
+        //bg: '#1e1e1e',
+        //color: '#f8f8f8',
+    //})
     const cursor = new Cursor({
-        $el: '.cursor',
-        w:15,
-        h:15,
-        bg: '#1e1e1e',
-        color: '#f8f8f8',
-    })
-
+            w: '15px',
+            h: '15px',
+            bg: '#1e1e1e',
+            color: '#fff'
+        });
 }
 const animateEntrance = () => {
     
